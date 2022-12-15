@@ -63,3 +63,34 @@ def get_all_matches(team):
     return array
 
 print(get_all_matches(drop_from_8))
+
+
+
+#_______추가함__________
+
+all_dropped_matches_2 = get_all_matches(drop_from_2)
+
+
+print(all_dropped_matches_2)
+print(list(all_dropped_matches_2.values()))
+
+standard_lost_2 = []
+
+for i in list(all_dropped_matches_2.values()):
+    for j in i:
+        if j['home_score'] > j['away_score']:
+            standard_lost_2.append(j["away_score"])
+        else:
+            standard_lost_2.append(j["home_score"])
+
+print(standard_lost_2)
+
+our_match_score = float(input('점수를 입력하세요:'))
+print(our_match_score)
+
+C = 0
+
+for score in standard_lost_2:
+    C += abs(score - our_match_score)
+
+print(C)
