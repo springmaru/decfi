@@ -1,0 +1,102 @@
+! 
+Round of 16,,Sat,2014-06-28,13:00 (01:00),Brazil br,(3) 1–1 (2),cl Chile,57714,Estádio Governador Magalhães Pinto (Neutral Site),Howard Webb,Match Report,Brazil won on penalty kicks following extra time
+Round of 16,,Sat,2014-06-28,17:00 (05:00),Colombia co,2–0,uy Uruguay,73804,Estadio Jornalista Mário Filho (Neutral Site),Björn Kuipers,Match Report,
+Round of 16,,Sun,2014-06-29,13:00 (01:00),Netherlands nl,2–1,mx Mexico,58817,Estádio Castelão (Neutral Site),Pedro Proença,Match Report,
+Round of 16,,Sun,2014-06-29,17:00 (05:00),Costa Rica cr,(5) 1–1 (3),gr Greece,41242,Itaipava Arena Pernambuco (Neutral Site),Benjamin Williams,Match Report,Costa Rica won on penalty kicks following extra time
+Round of 16,,Mon,2014-06-30,13:00 (01:00),France fr,2–0,ng Nigeria,67882,Estádio Nacional de Brasília (Neutral Site),Mark Geiger,Match Report,
+Round of 16,,Mon,2014-06-30,17:00 (05:00),Germany de,2–1,dz Algeria,43063,Estádio José Pinheiro Borba (Neutral Site),Sandro Ricci,Match Report,Required Extra Time
+Round of 16,,Tue,2014-07-01,13:00 (01:00),Argentina ar,1–0,ch Switzerland,63255,Arena Corinthians (Neutral Site),Jonas Eriksson,Match Report,Required Extra Time
+Round of 16,,Tue,2014-07-01,17:00 (05:00),Belgium be,2–1,us United States,51227,Itaipava Arena Fonte Nova (Neutral Site),Djamel Haïmoudi,Match Report,Required Extra Time
+Quarter-finals,,Fri,2014-07-04,13:00 (01:00),France fr,0–1,de Germany,74240,Estadio Jornalista Mário Filho (Neutral Site),Néstor Pitana,Match Report,
+Quarter-finals,,Fri,2014-07-04,17:00 (05:00),Brazil br,2–1,co Colombia,60342,Estádio Castelão (Neutral Site),Carlos Velasco,Match Report,
+Quarter-finals,,Sat,2014-07-05,13:00 (01:00),Argentina ar,1–0,be Belgium,68551,Estádio Nacional de Brasília (Neutral Site),Nicola Rizzoli,Match Report,
+Quarter-finals,,Sat,2014-07-05,17:00 (05:00),Netherlands nl,(4) 0–0 (3),cr Costa Rica,51179,Itaipava Arena Fonte Nova (Neutral Site),Ravshan Irmatov,Match Report,Netherlands won on penalty kicks following extra time
+Semi-finals,,Tue,2014-07-08,17:00 (05:00),Brazil br,1–7,de Germany,58141,Estádio Governador Magalhães Pinto (Neutral Site),Marco Antonio Rodríguez,Match Report,
+Semi-finals,,Wed,2014-07-09,17:00 (05:00),Netherlands nl,(2) 0–0 (4),ar Argentina,63267,Arena Corinthians (Neutral Site),Cüneyt Çakιr,Match Report,Argentina won on penalty kicks following extra time
+Third-place match,,Sat,2014-07-12,17:00 (05:00),Brazil br,0–3,nl Netherlands,68034,Estádio Nacional de Brasília (Neutral Site),Djamel Haïmoudi,Match Report,
+Final,,Sun,2014-07-13,16:00 (04:00),Germany de,1–0,ar Argentina,74738,Estadio Jornalista Mário Filho (Neutral Site),Nicola Rizzoli,Match Report,Required Extra Time
+! 
+Round of 16,,Sat,2010-06-26,16:00 (23:00),Uruguay uy,2–1,kr Korea Republic,30597,Nelson Mandela Bay Stadium (Neutral Site),,Match Report,
+Round of 16,,Sat,2010-06-26,20:30 (03:30),United States us,1–2,gh Ghana,34976,Royal Bafokeng Stadium (Neutral Site),,Match Report,Required Extra Time
+Round of 16,,Sun,2010-06-27,16:00 (23:00),Germany de,4–1,eng England,40510,Toyota Stadium (Neutral Site),,Match Report,
+Round of 16,,Sun,2010-06-27,20:30 (03:30),Argentina ar,3–1,mx Mexico,84377,Soccer City (Neutral Site),,Match Report,
+Round of 16,,Mon,2010-06-28,16:00 (23:00),Netherlands nl,2–1,sk Slovakia,61962,Moses Mabhida Stadium (Neutral Site),,Match Report,
+Round of 16,,Mon,2010-06-28,20:30 (03:30),Brazil br,3–0,cl Chile,54096,Emirates Airline Park (Neutral Site),,Match Report,
+Round of 16,,Tue,2010-06-29,16:00 (23:00),Paraguay py,(5) 0–0 (3),jp Japan,36742,Loftus Versfeld Stadium (Neutral Site),,Match Report,Paraguay won on penalty kicks following extra time
+Round of 16,,Tue,2010-06-29,20:30 (03:30),Spain es,1–0,pt Portugal,62955,Cape Town Stadium (Neutral Site),,Match Report,
+Quarter-finals,,Fri,2010-07-02,16:00 (23:00),Netherlands nl,2–1,br Brazil,40186,Nelson Mandela Bay Stadium (Neutral Site),,Match Report,
+Quarter-finals,,Fri,2010-07-02,20:30 (03:30),Uruguay uy,(4) 1–1 (2),gh Ghana,84017,Soccer City (Neutral Site),,Match Report,Uruguay won on penalty kicks following extra time
+Quarter-finals,,Sat,2010-07-03,16:00 (23:00),Argentina ar,0–4,de Germany,64100,Cape Town Stadium (Neutral Site),,Match Report,
+Quarter-finals,,Sat,2010-07-03,20:30 (03:30),Paraguay py,0–1,es Spain,55359,Emirates Airline Park (Neutral Site),,Match Report,
+Semi-finals,,Tue,2010-07-06,20:30 (03:30),Uruguay uy,2–3,nl Netherlands,62479,Cape Town Stadium (Neutral Site),,Match Report,
+Semi-finals,,Wed,2010-07-07,20:30 (03:30),Germany de,0–1,es Spain,60960,Moses Mabhida Stadium (Neutral Site),,Match Report,
+Third-place match,,Sat,2010-07-10,20:30 (03:30),Uruguay uy,2–3,de Germany,36254,Nelson Mandela Bay Stadium (Neutral Site),,Match Report,
+Final,,Sun,2010-07-11,20:30 (03:30),Netherlands nl,0–1,es Spain,84490,Soccer City (Neutral Site),Howard Webb,Match Report,Required Extra Time
+!
+Round of 16,,Sat,2006-06-24,17:00 (00:00),Germany de,2–0,se Sweden,66000,Allianz Arena (Neutral Site),,Match Report,
+Round of 16,,Sat,2006-06-24,21:00 (04:00),Argentina ar,2–1,mx Mexico,43000,Red Bull Arena (Neutral Site),,Match Report,Required Extra Time
+Round of 16,,Sun,2006-06-25,17:00 (00:00),England eng,1–0,ec Ecuador,52000,Mercedes-Benz Arena (Neutral Site),,Match Report,
+Round of 16,,Sun,2006-06-25,21:00 (04:00),Portugal pt,1–0,nl Netherlands,41000,Max-Morlock-Stadion (Neutral Site),,Match Report,
+Round of 16,,Mon,2006-06-26,17:00 (00:00),Italy it,1–0,au Australia,46000,Fritz-Walter-Stadion (Neutral Site),,Match Report,
+Round of 16,,Mon,2006-06-26,21:00 (04:00),Switzerland ch,(0) 0–0 (3),ua Ukraine,45000,RheinEnergieSTADION (Neutral Site),,Match Report,Ukraine won on penalty kicks following extra time
+Round of 16,,Tue,2006-06-27,17:00 (00:00),Brazil br,3–0,gh Ghana,65000,Signal Iduna Park (Neutral Site),,Match Report,
+Round of 16,,Tue,2006-06-27,21:00 (04:00),Spain es,1–3,fr France,43000,HDI-Arena (Neutral Site),,Match Report,
+Quarter-finals,,Fri,2006-06-30,17:00 (00:00),Germany de,(4) 1–1 (2),ar Argentina,72000,Olympiastadion Berlin (Neutral Site),,Match Report,Germany won on penalty kicks following extra time
+Quarter-finals,,Fri,2006-06-30,21:00 (04:00),Italy it,3–0,ua Ukraine,50000,Volksparkstadion (Neutral Site),,Match Report,
+Quarter-finals,,Sat,2006-07-01,17:00 (00:00),England eng,(1) 0–0 (3),pt Portugal,52000,Veltins-Arena (Neutral Site),,Match Report,Portugal won on penalty kicks following extra time
+Quarter-finals,,Sat,2006-07-01,21:00 (04:00),Brazil br,0–1,fr France,48000,Commerzbank-Arena (Neutral Site),,Match Report,
+Semi-finals,,Tue,2006-07-04,21:00 (04:00),Germany de,0–2,it Italy,65000,Signal Iduna Park (Neutral Site),,Match Report,Required Extra Time
+Semi-finals,,Wed,2006-07-05,21:00 (04:00),Portugal pt,0–1,fr France,66000,Allianz Arena (Neutral Site),,Match Report,
+Third-place match,,Sat,2006-07-08,21:00 (04:00),Germany de,3–1,pt Portugal,52000,Mercedes-Benz Arena (Neutral Site),,Match Report,
+Final,,Sun,2006-07-09,20:00 (03:00),Italy it,(5) 1–1 (3),fr France,69000,Olympiastadion Berlin (Neutral Site),,Match Report,Italy won on penalty kicks following extra time
+!
+Round of 16,,Sat,2002-06-15,15:30,Germany de,1–0,py Paraguay,25176,Jeju World Cup Stadium (Neutral Site),,Match Report,
+Round of 16,,Sat,2002-06-15,20:30,Denmark dk,0–3,eng England,40582,Denka Big Swan Stadium (Neutral Site),,Match Report,
+Round of 16,,Sun,2002-06-16,15:30,Sweden se,1–2,sn Senegal,39747,Ōita Bank Dome (Neutral Site),,Match Report,Required Extra Time
+Round of 16,,Sun,2002-06-16,20:30,Spain es,(3) 1–1 (2),ie Rep. of Ireland,38926,Suwon World Cup Stadium (Neutral Site),,Match Report,Spain won on penalty kicks following extra time
+Round of 16,,Mon,2002-06-17,15:30,Mexico mx,0–2,us United States,36380,Jeonju World Cup Stadium (Neutral Site),,Match Report,
+Round of 16,,Mon,2002-06-17,20:30,Brazil br,2–0,be Belgium,40440,NOEVIR Stadium Kobe (Neutral Site),,Match Report,
+Round of 16,,Tue,2002-06-18,15:30,Japan jp,0–1,tr Türkiye,45666,Miyagi Stadium (Neutral Site),,Match Report,
+Round of 16,,Tue,2002-06-18,20:30,Korea Republic kr,2–1,it Italy,38588,Daejeon World Cup Stadium (Neutral Site),,Match Report,Required Extra Time
+Quarter-finals,,Fri,2002-06-21,15:30,England eng,1–2,br Brazil,47436,Daejeon World Cup Stadium (Neutral Site),,Match Report,
+Quarter-finals,,Fri,2002-06-21,20:30,Germany de,1–0,us United States,37337,Munsu Cup Stadium (Neutral Site),,Match Report,
+Quarter-finals,,Sat,2002-06-22,15:30,Spain es,(3) 0–0 (5),kr Korea Republic,42114,Guus Hiddink Stadium (Neutral Site),,Match Report,Korea Republic won on penalty kicks following extra time
+Quarter-finals,,Sat,2002-06-22,20:30,Senegal sn,0–1,tr Türkiye,44233,Yanmar Stadium Nagai (Neutral Site),,Match Report,Required Extra Time
+Semi-finals,,Tue,2002-06-25,20:30,Germany de,1–0,kr Korea Republic,65625,Seoul World Cup Stadium (Neutral Site),,Match Report,
+Semi-finals,,Wed,2002-06-26,20:30,Brazil br,1–0,tr Türkiye,61058,Saitama Stadium 2002 (Neutral Site),,Match Report,
+Third-place match,,Sat,2002-06-29,20:00,Korea Republic kr,2–3,tr Türkiye,63483,Daegu Main Stadium (Neutral Site),,Match Report,
+Final,,Sun,2002-06-30,20:00,Germany de,0–2,br Brazil,69029,Nissan Stadium (Neutral Site),,Match Report,
+!
+Round of 16,,Sat,1998-06-27,16:30 (23:30),Italy it,1–0,no Norway,55000,Orange Vélodrome (Neutral Site),,Match Report,
+Round of 16,,Sat,1998-06-27,21:00 (04:00),Brazil br,4–1,cl Chile,45500,Parc des Princes (Neutral Site),,Match Report,
+Round of 16,,Sun,1998-06-28,16:30 (23:30),France fr,1–0,py Paraguay,31800,Stade Bollaert-Delelis (Neutral Site),,Match Report,Required Extra Time
+Round of 16,,Sun,1998-06-28,21:00 (04:00),Nigeria ng,1–4,dk Denmark,77000,Stade de France (Neutral Site),,Match Report,
+Round of 16,,Mon,1998-06-29,16:30 (23:30),Germany de,2–1,mx Mexico,29800,Stade de la Mosson (Neutral Site),,Match Report,
+Round of 16,,Mon,1998-06-29,21:00 (04:00),Netherlands nl,2–1,rs Yugoslavia,33000,Stadium Municipal (Neutral Site),,Match Report,
+Round of 16,,Tue,1998-06-30,16:30 (23:30),Romania ro,0–1,hr Croatia,31800,Stade Jacques Chaban-Delmas (Neutral Site),,Match Report,
+Round of 16,,Tue,1998-06-30,21:00 (04:00),Argentina ar,(4) 2–2 (3),eng England,30600,Stade Geoffroy-Guichard (Neutral Site),,Match Report,Argentina won on penalty kicks following extra time
+Quarter-finals,,Fri,1998-07-03,16:30 (23:30),Italy it,(3) 0–0 (4),fr France,80000,Stade de France (Neutral Site),,Match Report,France won on penalty kicks following extra time
+Quarter-finals,,Fri,1998-07-03,21:00 (04:00),Brazil br,3–2,dk Denmark,49500,Stade de la Beaujoire - Louis Fonteneau (Neutral Site),,Match Report,
+Quarter-finals,,Sat,1998-07-04,16:30 (23:30),Netherlands nl,2–1,ar Argentina,60000,Orange Vélodrome (Neutral Site),,Match Report,
+Quarter-finals,,Sat,1998-07-04,21:00 (04:00),Germany de,0–3,hr Croatia,43300,Matmut Stadium de Gerland (Neutral Site),,Match Report,
+Semi-finals,,Tue,1998-07-07,21:00 (04:00),Brazil br,(4) 1–1 (2),nl Netherlands,60000,Orange Vélodrome (Neutral Site),,Match Report,Brazil won on penalty kicks following extra time
+Semi-finals,,Wed,1998-07-08,21:00 (04:00),France fr,2–1,hr Croatia,80000,Stade de France (Neutral Site),,Match Report,
+Third-place match,,Sat,1998-07-11,21:00 (04:00),Netherlands nl,1–2,hr Croatia,44000,Parc des Princes (Neutral Site),,Match Report,
+Final,,Sun,1998-07-12,21:00 (04:00),Brazil br,0–3,fr France,80000,Stade de France (Neutral Site),,Match Report,
+!
+Round of 16,Sat,1994-07-02,12:00 (02:00),Germany de,3–2,be Belgium,60246,Soldier Field (Neutral Site),Kurt Roethlisberger,Match Report,
+Round of 16,Sat,1994-07-02,16:30 (05:30),Spain es,3–0,ch Switzerland,53121,RFK Stadium (Neutral Site),Mario Van Der Ende,Match Report,
+Round of 16,Sun,1994-07-03,12:00 (02:00),Saudi Arabia sa,1–3,se Sweden,60277,Cotton Bowl (Neutral Site),Renato Marsiglia,Match Report,
+Round of 16,Sun,1994-07-03,13:30 (05:30),Romania ro,3–2,ar Argentina,90469,Rose Bowl (Neutral Site),Pierluigi Pairetto,Match Report,
+Round of 16,Mon,1994-07-04,12:00 (01:00),Netherlands nl,2–0,ie Rep. of Ireland,61355,Citrus Bowl (Neutral Site),Peter Mikkelsen,Match Report,
+Round of 16,Mon,1994-07-04,12:30 (04:30),Brazil br,1–0,us United States,84147,Stanford Stadium (Neutral Site),Joel Quiniou,Match Report,
+Round of 16,Tue,1994-07-05,13:00 (02:00),Nigeria ng,1–2,it Italy,54367,Foxboro Stadium (Neutral Site),Arturo Brizio Carter,Match Report,Required Extra Time
+Round of 16,Tue,1994-07-05,16:30 (05:30),Mexico mx,(1) 1–1 (3),bg Bulgaria,71030,Giants Stadium (Neutral Site),Jamal Al Sharif,Match Report,Bulgaria won on penalty kicks following extra time
+Quarter-finals,Sat,1994-07-09,12:00 (01:00),Italy it,2–1,es Spain,53400,Foxboro Stadium (Neutral Site),Sandor Puhl,Match Report,
+Quarter-finals,Sat,1994-07-09,14:30 (04:30),Netherlands nl,2–3,br Brazil,63500,Cotton Bowl (Neutral Site),Rodrigo Badilla,Match Report,
+Quarter-finals,Sun,1994-07-10,12:00 (01:00),Bulgaria bg,2–1,de Germany,72000,Giants Stadium (Neutral Site),Jose Joaquin Torres Cadena,Match Report,
+Quarter-finals,Sun,1994-07-10,12:30 (04:30),Romania ro,(4) 2–2 (5),se Sweden,83500,Stanford Stadium (Neutral Site),Philip Don,Match Report,Sweden won on penalty kicks following extra time
+Semi-finals,Wed,1994-07-13,16:00 (05:00),Bulgaria bg,1–2,it Italy,74110,Giants Stadium (Neutral Site),Joel Quiniou,Match Report,
+Semi-finals,Wed,1994-07-13,16:30 (08:30),Sweden se,0–1,br Brazil,91856,Rose Bowl (Neutral Site),Jose Joaquin Torres Cadena,Match Report,
+Third-place match,Sat,1994-07-16,12:30 (04:30),Sweden se,4–0,bg Bulgaria,91500,Rose Bowl (Neutral Site),Ali Bujsaim,Match Report,
+Final,Sun,1994-07-17,12:30 (04:30),Brazil br,(3) 0–0 (2),it Italy,94194,Rose Bowl (Neutral Site),Sandor Puhl,Match Report,Brazil won on penalty kicks following extra time
