@@ -1,17 +1,18 @@
-# Pseudo code
+# Pseudo codes
 ※ 실제로 구현할 함수들의 목록은 쭉 아래로 내리면 "Function Needed"에 있습니다 !
 
 ## Principles
-### data analyze
-raw data -> data for analysis -> data for train 의 순서로 정보처리를 진행해주세요.
+### data processing
+raw data -> data for analysis -> data for train 의 순서로 정보처리를 진행할겁니다.
 raw data -> data for analysis 부분은 정보를 구조화하는데에 큰 의미가 있고, 
 data for train은 실제 ML을 돌리는데에 사용될 자료구조입니다.
+아래 공지한 대부분의 함수는 여기에 사용됩니다.
 
 ### softmax regression
 softmax regression 코드는 대부분 다 완성되어있는 상태입니다 (with tensorflow).
-Github에는 ML.py라는 파일에 softmax regression 부분이 완성되어있으니 작업하시다가 궁금하신 부분은 참고해주세요 :)
+Github에는 ML.py라는 파일에 softmax regression 부분이 있으니 작업하시다가 궁금하신 부분은 참고해주세요 :)
 
-### front-end
+### frontend
 front-end는 tkinter나 다른 파이썬 GUI 제작 라이브러리를 이용해서 작업해주세요
 
 ## Data Structure
@@ -24,8 +25,6 @@ front-end는 tkinter나 다른 파이썬 GUI 제작 라이브러리를 이용해
 
 - data for analysis
 > round_of_16 = [{"home" : "Uruguay", "away" : "Colombia", "home_point" : 0, "away_point" : 2, "dif" : -2, "home_rank" : 14, "away_rank" : 17}] 
-
-
 
 ■ 홈에는 대상팀 ( 우루과이가 16강에서 떨어졌으니까 이 경기를 우루과이 입장에서 처리할 때는 home 이 우루과이, 나중에 8강에서 떨어진 콜롬비아 입장에서는 
 ■ dif는 무조건 home_point - end_point로 계산해주세요
@@ -40,7 +39,7 @@ y_train = [1,0,0,0,0]
 
 
 ## Functions Needed
-
+Data Structure 에 대한 내용도 포함되어있으니 꼭 읽어주세요 :)
 ### raw_to_json(text)
 >Round of 16,,Sat,2014-06-28,17:00 (05:00),Colombia co,2–0,uy Uruguay,73804,Estadio Jornalista Mário Filho (Neutral Site),Björn Kuipers,Match Report,
 
@@ -56,17 +55,39 @@ round는 16강이면 16, 8강이면 8, 4강이면 4, 결승이면 2로 작성해
 ■ 피파랭킹은 웹크롤링으로 처리하려고 했으나 직접 array를 만들던지 해야할 것 같습니다.. why? : 실제로 데이터에 있는 형태로 (여기선 Colombia, Uruguay)로 array에 넣을 이름을 구성해야해서..
 ■ (raw data가 많이 길기 때문에 실제 함수를 사용할 때에는 txt.readlines를 for로 돌면서 하나하나 처리할 예정입니다.)
 
-이 데이터는 본문에서 world cup 단위별로 collect 
+실제 이 코드를 활용할 때는 아래와 같이
+> [{"home" : "Uruguay", "away" : "Colombia", "home_point" : 0, "away_point" 	: 2, "dif" : -2, "home_rank" : 14, "away_rank" : 17, "round" :16}, {"home" : "Belgium", "away" : "United States", "home_point" : 2, "away_point" 	: 1, "dif" : 1, "home_rank" : 2, "away_rank" : 17, "round" : 8}]
 
-### get_teams_of_league() 	
+하나의 월드컵을 쫙 돌면서 각 match의 정보들을 list로 모아놓을거에요.
+
+### get_teams_of_league(worldcup) 	
 
 > [{"home" : "Uruguay", "away" : "Colombia", "home_point" : 0, "away_point" 	: 2, "dif" : -2, "home_rank" : 14, "away_rank" : 17, "round" :16}, {"home" : "Belgium", "away" : "United States", "home_point" : 2, "away_point" 	: 1, "dif" : 1, "home_rank" : 2, "away_rank" : 17, "round" : 8}]
 
-Input은 하나의 worldcup 단위로 들어갑니다.
+Input은 하나의 worldcup 단위로 들어간다고 보시면 됩니다. (한 월드컵에 참여한 모든 국가를 구하는 함수)
+function 내부에 teams_list = [] 를 만들고 if team not in teams_list일 때 teams_list에 추가하는 방식으로 진행하면 됩니다 :)
+dictionary의 dict["home"]과 dict["away"]를 모두 검사해줘야합니다.
+round를 같이 검사해줘서, return으로는 각 라운드에서 떨어진 team을 모아줄거에요. (준우승 팀은 2, 우승팀은 1로 표기해주면 되요 !)
+dif는 무조건 home - end로 적어주세요.
+> {16: ["Uruguay", "South Korea", "Colombia" .. ], 8: ["United States"] ... }
+
+처럼 나오게 되는거죠 !
+
+### tracking_team(match, team)
+
+for i in match와 for j in team을 돌면서 각 team이 경기한 경기를 모두 collect하는 function입니다.  
+
+> ["Uruguay" : [{"home" : "Uruguay", "away" : "Colombia", "home_point" : 3, "away_point" 	: 2, "dif" : 1, "home_rank" : 14, "away_rank" : 17, "round" :16}, {"home" : "Uruguay", "away" : "Japan", "home_point" : 0, "away_point" 	: 2, "dif" : -2, "home_rank" : 14, "away_rank" : 23, "round" :8} ... ], "국가 이름" : [국가가 한 경기 dictionary 모두 정리]]
+
+우루과이에 대해 collect 할 때는 우루과이를 home team으로 해서 re-arrangement 해주시고, dif도 home-end가 될 수 있게 재정리해주세요.
 
 
+### analysis_to_train(match)
+위에 나온 형태를 실제 학습용 (data for train) 형태로 바꿔줘야합니다.
+Input 형태는 아래와 같습니다.
+>{"home" : "Uruguay", "away" : "Colombia", "home_point" : 0, "away_point" 	: 2, "dif" : -2, "home_rank" : 14, "away_rank" : 17, "round" :16}
 
+여기서 아래와 같이 만들어서 리턴해주는 함수를 제작해주시면 됩니다 :)
 
-### analysis
-
-### analysis_to_train()
+> [[3,2,1,14,17,3], [1,0,0,0,0]]
+> #[[홈득점, 상대득점,득실,홈피파랭킹,상대피파랭킹,피파랭킹차이], [16강, 8강, 4강, 준우승, 우승 중 해당하는거만 1, 나머지는 0]]
