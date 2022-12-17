@@ -9,11 +9,11 @@ data for train은 실제 ML을 돌리는데에 사용될 자료구조입니다.
 아래 공지한 대부분의 함수는 여기에 사용됩니다.
 
 ### softmax regression
-softmax regression 코드는 대부분 다 완성되어있는 상태입니다 (with tensorflow).
+softmax regression 코드는 대부분 다 완성되어있는 상태입니다만 아직 epoch 최적화나 optimizer 조정 정도는 필요할 것 같습니다. (with tensorflow).
 Github에는 ML.py라는 파일에 softmax regression 부분이 있으니 작업하시다가 궁금하신 부분은 참고해주세요 :)
 
 ### frontend
-front-end는 tkinter나 다른 파이썬 GUI 제작 라이브러리를 이용해서 작업해주세요
+front-end는 tkinter나 다른 파이썬 GUI 제작 라이브러리를 이용해서 작업해주세요 (python에서 run하는게 제일 좋아요 :D)
 
 ## Data Structure
 
