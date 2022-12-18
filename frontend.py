@@ -6,8 +6,8 @@ from tkinter import messagebox
 
 
 root = Tk()
-root.title=("predicting_platform")
-root.geometry=('5000x5000')
+root.title("predicting_platform")
+root.geometry('5000x5000')
 
 #로고
 my_img1 = Image.open('/Users/b/Desktop/logo.png')
@@ -16,6 +16,15 @@ img1 = ImageTk.PhotoImage(resize_image1)
 
 label_logo = tk.Label(root,image=img1)
 label_logo.pack()
+
+#예시 표
+my_img2 = Image.open('/Users/b/Desktop/example.png')
+resize_image2 = my_img2.resize((400, 150))
+img2 = ImageTk.PhotoImage(resize_image2)
+
+label_example = tk.Label(root,image=img2)
+label_example.pack()
+
 
 #문구
 label_entry = tk.Label(root, text='위에 나와있는 데이터를 바탕으로 승리자를 예측해보세요!', font=('Arial', 15))
@@ -40,7 +49,7 @@ def get_prediction():
         return prediction
 
 #예측값을 '최종 제출'하는 버튼
-button = tk.Button(root, text='done', font=('arial', 13), bg='#00003', fg='white', command=get_prediction, relief = 'groove')
+button = tk.Button(root, text='done', font=('arial', 13), command=get_prediction, relief = 'groove')
 button.pack(ipadx=5, ipady=5, expand=True)
 #참고로 이 버튼 배경색... 남색인데 macOS는 bug 때문에 이게 하얀색으로 나타난다고 함.;;
 
@@ -80,7 +89,3 @@ menubar.add_cascade(menu=aboutmenu, label = 'About')
 root.config(menu=menubar)
 
 root.mainloop()
-
-
-
-
