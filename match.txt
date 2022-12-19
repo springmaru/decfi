@@ -1,4 +1,4 @@
-! 
+!
 Round of 16,,Sat,2014-06-28,13:00 (01:00),Brazil br,(3) 1–1 (2),cl Chile,57714,Estádio Governador Magalhães Pinto (Neutral Site),Howard Webb,Match Report,Brazil won on penalty kicks following extra time
 Round of 16,,Sat,2014-06-28,17:00 (05:00),Colombia co,2–0,uy Uruguay,73804,Estadio Jornalista Mário Filho (Neutral Site),Björn Kuipers,Match Report,
 Round of 16,,Sun,2014-06-29,13:00 (01:00),Netherlands nl,2–1,mx Mexico,58817,Estádio Castelão (Neutral Site),Pedro Proença,Match Report,
@@ -15,7 +15,7 @@ Semi-finals,,Tue,2014-07-08,17:00 (05:00),Brazil br,1–7,de Germany,58141,Está
 Semi-finals,,Wed,2014-07-09,17:00 (05:00),Netherlands nl,(2) 0–0 (4),ar Argentina,63267,Arena Corinthians (Neutral Site),Cüneyt Çakιr,Match Report,Argentina won on penalty kicks following extra time
 Third-place match,,Sat,2014-07-12,17:00 (05:00),Brazil br,0–3,nl Netherlands,68034,Estádio Nacional de Brasília (Neutral Site),Djamel Haïmoudi,Match Report,
 Final,,Sun,2014-07-13,16:00 (04:00),Germany de,1–0,ar Argentina,74738,Estadio Jornalista Mário Filho (Neutral Site),Nicola Rizzoli,Match Report,Required Extra Time
-! 
+!
 Round of 16,,Sat,2010-06-26,16:00 (23:00),Uruguay uy,2–1,kr Korea Republic,30597,Nelson Mandela Bay Stadium (Neutral Site),,Match Report,
 Round of 16,,Sat,2010-06-26,20:30 (03:30),United States us,1–2,gh Ghana,34976,Royal Bafokeng Stadium (Neutral Site),,Match Report,Required Extra Time
 Round of 16,,Sun,2010-06-27,16:00 (23:00),Germany de,4–1,eng England,40510,Toyota Stadium (Neutral Site),,Match Report,
