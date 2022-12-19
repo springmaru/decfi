@@ -37,6 +37,10 @@ def raw_to_json(text):
 
 
 
+def get_teams_of_league2(worldcup):
+    for i in worldcup:
+        pass
+
 
 def get_teams_of_league(worldcup):
   worldcup_str = worldcup.split('\n')
@@ -84,8 +88,12 @@ def get_teams_of_league(worldcup):
     key = list(n.keys())[0]
     value = n[key]
     return_dict[4 - int(math.log2(key))][key].append(value)
-
-  return return_dict
+  new_re_dict = {}
+  for i in return_dict:
+    key, value = list(i.keys())[0], list(i.values())[0]
+    new_re_dict[key] = value
+    # new_re_dict.append()
+  return new_re_dict
 
 
 
@@ -108,12 +116,30 @@ def changehomeaway(for_variable):
   return for_variable
 
 
+def tracking_team(match1, team1):
+    #return 형태는 {"Korea" : [경기들ㅎㅎ]}
+    for_return = {i:[] for i in team1}
+
+    for team in team1:
+        for match in match1:
+            if team == match["home"]: 
+                for_return[team].append(match)
+                
+                #승부차기
+            elif team == match["away"] : 
+                #match
+                processed_match = {"home": match["away"],"away" : match["home"], "home_point" : match["away_point"], "away_point" : match["home_point"], 
+                "dif" : -match["dif"], "home_rank": match["away_rank"], "away_rank": match["home_rank"], 
+                "round" : match["round"],
+                "home_point" : match["away_point"], "away_point" : match["home_point"]}
+                for_return[team].append(processed_match)
+
+    return for_return
 
 
 
-
-def tracking_team(match1, team):
-  worldcup_str = match1.split('\n')
+'''
+  worldcup_str = team1.split('\n')
   split_list = [] 
 
 #엔터(\n)를 기준으로 쪼개진 값을 딕셔너리 형태로 변환 - split_list로 들어감
@@ -129,7 +155,7 @@ def tracking_team(match1, team):
       team_gamecollection.append(changehomeaway(j))
   
   return {team: team_gamecollection}
-
+'''
 
 
 
@@ -147,17 +173,14 @@ def analysis_to_train(match):
     else: round_cnt[4] +=1
     train_set.append(round_cnt)
     return train_set
-  
-  
-  
-  
+
 # c.f) 월드컵 연도 나누는 함수
 def worldcup_year(string):
   split_string = string.split('!\n')
   return_list = [n for n in split_string if blank_checker(n) == True]
   return return_list
 
-worldcup_year(game_string)
+#worldcup_year(game_string)
 
 # c.f) 빈 문자열 체크해주는 함수
 def blank_checker(string):
