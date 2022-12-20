@@ -75,6 +75,7 @@ import numpy as np
 import tensorflow as tf
 import random as rd
 tf.random.set_seed(0.03) #하이퍼파라미터 튜닝을 위해 실행시 마다 변수가 같은 초기값 가지게 하기
+# 난수 만들기인데.. -> cost function 따라가면서 수렴시켜야하는데 난수에 따라서 발산 ->nan
 
 import copy
 #x_data = np.array(eval(str(x)))
@@ -104,7 +105,7 @@ def categorical_crossentropy(Y1, predictions2):
     #print(Y1, predictions2)
     cross_entropy1 = tf.math.reduce_sum(Y1 * (-tf.math.log(predictions2)), axis=1) 
     loss = tf.math.reduce_mean(cross_entropy1)
-    
+
     return loss
     
 optimizer = tf.keras.optimizers.Adam(learning_rate=0.01)
@@ -122,11 +123,15 @@ for epoch_index in range(epochs):
 
 ##########모델 예측
 
+# 실제 / 알고리즘 / 사람
+# 티
+
 x_test = np.array([
+    #[예측하려는 팀의 득점, 상대팀 득점, 득실차, 예측하려는 팀 피파랭킹, 상대 피파랭킹, 피파랭킹 차이]
     [3, 3, 0, 3, 4, 1], #아르헨티나  
     [3, 3, 0, 4, 3, -1], #프랑스  
     [2,1,1,28,9,-19], #한국 포르투갈
-    [0,1,-1,51,12,-39]
+    [0,1,-1,51,12,-39] #사우디 (하위권 팀)
     #[]
 ])
 
@@ -138,3 +143,7 @@ print(y_predict[0].argmax()) #0
 print(labels[y_predict[0].argmax()], y_predict[0][y_predict[0].argmax()]) #
 print(labels[y_predict[2].argmax()], y_predict[2][y_predict[2].argmax()]) #
 print(labels[y_predict[3].argmax()], y_predict[3][y_predict[3].argmax()]) #
+
+
+
+
