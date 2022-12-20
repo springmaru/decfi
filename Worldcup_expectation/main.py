@@ -401,32 +401,29 @@ def get_prediction():
     
     Label(popup, text= "예측결과", font=('Arial', 20)).pack(padx=10, pady=10)
 
-    viewer_df=tkinter.ttk.Treeview(popup, columns=["실제값", '알고리즘 예측값', '유저의 예측값'], displaycolumns=["실제값", '알고리즘 예측값', '유저의 예측값'], height = 1)
-    viewer_df.pack(padx=20, pady=20)
+    viewer_df2=tkinter.ttk.Treeview(popup, columns=["실제값", '알고리즘 예측값', '유저의 예측값'], displaycolumns=["실제값", '알고리즘 예측값', '유저의 예측값'], height = 1)
+    viewer_df2.pack(padx=20, pady=20)
 
 
     # 각 컬럼 설정. 컬럼 이름, 컬럼 넓이, 정렬 등
 
-    viewer_df.column("실제값", width=100, anchor="center")
-    viewer_df.heading("실제값", text = '실제값', anchor="center")
+    viewer_df2.column("실제값", width=100, anchor="center")
+    viewer_df2.heading("실제값", text = '실제값', anchor="center")
     #text=str(random_country_1)
 
-    viewer_df.column("알고리즘 예측값", width=150, anchor="center")
-    viewer_df.heading("알고리즘 예측값", text = '알고리즘 예측값', anchor="center")
+    viewer_df2.column("알고리즘 예측값", width=150, anchor="center")
+    viewer_df2.heading("알고리즘 예측값", text = '알고리즘 예측값', anchor="center")
     #text=str(random_country_2)
 
-    viewer_df.column("유저의 예측값", width=100, anchor="center")
-    viewer_df.heading("유저의 예측값", text = '유저의 예측값', anchor="center")
+    viewer_df2.column("유저의 예측값", width=100, anchor="center")
+    viewer_df2.heading("유저의 예측값", text = '유저의 예측값', anchor="center")
     #match_selected = matches_2022[rndm_ind]
-    viewer_df['show'] = 'headings' #index 안 보이게 
-    
-    
-    
-   
+    viewer_df2['show'] = 'headings' #index 안 보이게 
+
     datavalue_dict=[(str({j:x for x,i in qatar.items() for j in i}[match_selected['home']]), str(AI_prediction[0]), str(user_prediction))]
    
     for i in range(len(datavalue_dict)):
-        viewer_df.insert('', 'end', text=i, values=datavalue_dict[i], iid=str(i)+"번")
+        viewer_df2.insert('', 'end', text=i, values=datavalue_dict[i], iid=str(i)+"번")
 
     if str(user_prediction) == str(AI_prediction[0]) :
         Label(popup, text= "우와! 알고리즘과 예측결과가 일치하셨어요!", font=('Arial', 15)).pack(padx=20, pady=20)
@@ -435,6 +432,26 @@ def get_prediction():
     else:
         Label(popup, text= "흠, 값이 조금 다르군요.", font=('Arial', 15)).pack(padx=20, pady=20)
 
+    
+    shower_df=tkinter.ttk.Treeview(popup, columns=["맞춘 팀", "상대 팀"], displaycolumns=["맞춘 팀", "상대 팀"], height = 1)
+
+
+    # 각 컬럼 설정. 컬럼 이름, 컬럼 넓이, 정렬 등
+
+    shower_df.column("맞춘 팀", width=100, anchor="center")
+    shower_df.heading("맞춘 팀", text = '맞춘 팀', anchor="center")
+
+    shower_df.column("상대 팀", width=100, anchor="center")
+    shower_df.heading("상대 팀", text = '상대 팀', anchor="center")
+
+    shower_df['show'] = 'headings' #index 안 보이게 
+    
+   
+    datavalue_dict_shwr=[match_selected['home'], match_selected['away']]
+    print(datavalue_dict_shwr)
+    shower_df.insert('', 'end', text=0, values=(datavalue_dict_shwr[0],datavalue_dict_shwr[1]))
+
+    shower_df.pack(padx=20, pady=20)
 
     
 
