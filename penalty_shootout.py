@@ -7,8 +7,6 @@ def shootout_pt(total_str):
   team_list = list(set([l['home'] for l in json_list] + [l['away'] for l in json_list]))
   return_list = []
   return_dict = {}
-  cnt = 0
-  win = 0
 
   for i in team_list:
     cnt = 0
