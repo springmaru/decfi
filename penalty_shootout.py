@@ -6,6 +6,7 @@ def shootout_pt(total_str):
   json_list = [raw_to_json(m) for m in check_list]
   team_list = list(set([l['home'] for l in json_list] + [l['away'] for l in json_list]))
   return_list = []
+  return_dict = {}
   cnt = 0
   win = 0
 
@@ -26,4 +27,7 @@ def shootout_pt(total_str):
     if cnt != 0:
       return_list.append({i: round(win / cnt, 2)})
 
-  return return_list
+  for k in return_list:
+    return_dict.update(k)
+
+  return return_dict
