@@ -3,6 +3,103 @@ import math
 #피파 랭킹 - {연도: 순위} 형태로 정리됨
 fifa_ranking = {2014: ['Spain', 'Germany', 'Brazil', 'Portugal', 'Argentina', 'Switzerland', 'Uruguay', 'Colombia', 'Italy', 'England', 'Belgium', 'Greece', 'United States', 'Chile', 'Netherlands', 'Ukraine', 'France', 'Croatia', 'Russia', 'Mexico', 'Bosnia and Herzegovina', 'Algeria', 'Denmark', "Côte d'Ivoire", 'Slovenia', 'Ecuador', 'Scotland', 'Costa Rica', 'Romania', 'Serbia', 'Panama', 'Sweden', 'Honduras', 'Czech Republic', 'Turkey', 'Egypt', 'Ghana', 'Armenia', 'Cape Verde Islands', 'Venezuela', 'Wales', 'Austria', 'IR Iran', 'Nigeria', 'Peru', 'Japan', 'Hungary', 'Tunisia', 'Slovakia', 'Paraguay'], 2010: ['Brazil', 'Spain', 'Portugal', 'Netherlands', 'Italy', 'Germany', 'Argentina', 'England', 'France', 'Croatia', 'Russia', 'Egypt', 'Greece', 'United States', 'Serbia', 'Uruguay', 'Mexico', 'Chile', 'Cameroon', 'Australia', 'Nigeria', 'Norway', 'Ukraine', 'Switzerland', 'Slovenia', 'Israel', "Côte d'Ivoire", 'Romania', 'Turkey', 'Algeria', 'Paraguay', 'Ghana', 'Czech Republic', 'Slovakia', 'Colombia', 'Denmark', 'Sweden', 'Honduras', 'Bulgaria', 'Costa Rica', 'Republic of Ireland', 'Gabon', 'Scotland', 'Ecuador', 'Japan', 'Latvia', 'Korea Republic', 'Burkina Faso', 'Venezuela', 'Lithuania'], 2006: ['Brazil', 'Czech Republic', 'Netherlands', 'Mexico', 'United States', 'Spain', 'Portugal', 'France', 'Argentina', 'England', 'Nigeria', 'Denmark', 'Italy', 'Turkey', 'Cameroon', 'Sweden', 'Egypt', 'Japan', 'Germany', 'Greece', 'Tunisia', 'Uruguay', 'IR Iran', 'Croatia', 'Romania', 'Costa Rica', 'Colombia', 'Senegal', 'Poland', 'Korea Republic', 'Republic of Ireland', "Côte d'Ivoire", 'Paraguay', 'Saudi Arabia', 'Switzerland', 'Morocco', 'Russia', 'Bulgaria', 'Ecuador', 'Norway', 'Slovakia', 'Honduras', 'Australia', 'Serbia and Montenegro', 'Ukraine', 'Jamaica', 'Trinidad and Tobago', 'Ghana', 'Finland', 'Israel'], 2002: ['France', 'Brazil', 'Argentina', 'Colombia', 'Portugal', 'Italy', 'Mexico', 'Spain', 'Netherlands', 'Yugoslavia', 'Germany', 'England', 'United States', 'Romania', 'Republic of Ireland', 'Czech Republic', 'Cameroon', 'Paraguay', 'Sweden', 'Denmark', 'Croatia', 'Turkey', 'Belgium', 'Uruguay', 'Slovenia', 'Honduras', 'Nigeria', 'Russia', 'Costa Rica', 'IR Iran', 'Tunisia', 'Japan', 'Norway', 'Saudi Arabia', 'Trinidad and Tobago', 'Ecuador', 'South Africa', 'Poland', 'Morocco', 'Korea Republic', 'Finland', 'Senegal', 'Egypt', 'Ukraine', 'Chile', "Côte d'Ivoire", 'Peru', 'Australia', 'Slovakia', 'China PR'], 1998: ['Brazil', 'Germany', 'Czech Republic', 'Mexico', 'England', 'Argentina', 'Norway', 'Yugoslavia', 'Chile', 'Colombia', 'United States', 'Japan', 'Morocco', 'Italy', 'Spain', 'Russia', 'Egypt', 'France', 'Croatia', 'Korea Republic', 'Tunisia', 'Romania', 'Zambia', 'South Africa', 'Netherlands', 'Ecuador', 'Denmark', 'Sweden', 'Paraguay', 'Jamaica', 'Austria', 'Australia', 'Bolivia', 'Saudi Arabia', 'Bulgaria', 'Belgium', 'Peru', 'Uruguay', 'Portugal', 'Slovakia', 'Scotland', 'IR Iran', 'Kuwait', "Côte d'Ivoire", 'Lithuania', 'Republic of Ireland', 'Israel', 'Trinidad and Tobago', 'Cameroon', 'Thailand', 'China PR', 'Georgia', 'Turkey', 'Poland', 'Greece', 'Angola', 'Algeria', 'Costa Rica', 'United Arab Emirates', 'Guinea', 'Finland', 'Hungary', 'Zaire', 'Ukraine', 'Ghana', 'Mali', 'Burkina Faso', 'El Salvador', 'Mozambique', 'Quatar', 'FYR Macedonia', 'Iceland', 'Togo', 'Nigeria', 'Guatemala'], 1994: ['Germany', 'Netherlands', 'Brazil', 'Italy', 'Spain', 'Norway', 'Romania', 'Argentina', 'Denmark', 'Sweden', 'Nigeria', 'Switzerland', 'France', 'Republic of Ireland', 'England', 'Mexico', 'Colombia', 'Uruguay', 'Russia', 'Zambia', "Côte d'Ivoire", 'Portugal', 'United States', 'Cameroon', 'Egypt', 'Ghana', 'Belgium', 'Morocco', 'Bulgaria', 'Tunisia', 'Greece', 'Poland', 'Scotland', 'Saudi Arabia', 'Wales', 'Austria', 'Korea Republic', 'Iceland', 'Ecuador', 'Chile', 'Northern Ireland', 'Zimbabwe', 'Bolivia', 'Slovakia', 'Czech Republic', 'Finland', 'Australia', 'Algeria', 'Mali', 'Honduras']}
 
+game_log = [{'home': 'Brazil', 'away': 'Chile', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 3, 'away_rank': 14, 'round': 16, 'home_shootout': 3, 'away_shootout': 2},
+{'home': 'Colombia', 'away': 'Uruguay', 'home_point': 2, 'away_point': 0, 'dif': 2, 'home_rank': 8, 'away_rank': 7, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Mexico', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 15, 'away_rank': 20, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Costa Rica', 'away': 'Greece', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 28, 'away_rank': 12, 'round': 16, 'home_shootout': 5, 'away_shootout': 3},
+{'home': 'France', 'away': 'Nigeria', 'home_point': 2, 'away_point': 0, 'dif': 2, 'home_rank': 17, 'away_rank': 44, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Algeria', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 2, 'away_rank': 22, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Argentina', 'away': 'Switzerland', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 5, 'away_rank': 6, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Belgium', 'away': 'United States', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 11, 'away_rank': 13, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'France', 'away': 'Germany', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 17, 'away_rank': 2, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Colombia', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 3, 'away_rank': 8, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Argentina', 'away': 'Belgium', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 5, 'away_rank': 11, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Costa Rica', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 15, 'away_rank': 28, 'round': 8, 'home_shootout': 4, 'away_shootout': 3},
+{'home': 'Brazil', 'away': 'Germany', 'home_point': 1, 'away_point': 7, 'dif': -6, 'home_rank': 3, 'away_rank': 2, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Argentina', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 15, 'away_rank': 5, 'round': 4, 'home_shootout': 2, 'away_shootout': 4},
+{'home': 'Brazil', 'away': 'Netherlands', 'home_point': 0, 'away_point': 3, 'dif': -3, 'home_rank': 3, 'away_rank': 15, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Argentina', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 2, 'away_rank': 5, 'round': 2, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Uruguay', 'away': 'Korea Republic', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 16, 'away_rank': 47, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'United States', 'away': 'Ghana', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 14, 'away_rank': 32, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'England', 'home_point': 4, 'away_point': 1, 'dif': 3, 'home_rank': 6, 'away_rank': 8, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Argentina', 'away': 'Mexico', 'home_point': 3, 'away_point': 1, 'dif': 2, 'home_rank': 7, 'away_rank': 17, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Slovakia', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 4, 'away_rank': 34, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Chile', 'home_point': 3, 'away_point': 0, 'dif': 3, 'home_rank': 1, 'away_rank': 18, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Paraguay', 'away': 'Japan', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 31, 'away_rank': 45, 'round': 16, 'home_shootout': 5, 'away_shootout': 3},
+{'home': 'Spain', 'away': 'Portugal', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 2, 'away_rank': 3, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Brazil', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 4, 'away_rank': 1, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Uruguay', 'away': 'Ghana', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 16, 'away_rank': 32, 'round': 8, 'home_shootout': 4, 'away_shootout': 2},
+{'home': 'Argentina', 'away': 'Germany', 'home_point': 0, 'away_point': 4, 'dif': -4, 'home_rank': 7, 'away_rank': 6, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Paraguay', 'away': 'Spain', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 31, 'away_rank': 2, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Uruguay', 'away': 'Netherlands', 'home_point': 2, 'away_point': 3, 'dif': -1, 'home_rank': 16, 'away_rank': 4, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Spain', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 6, 'away_rank': 2, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Uruguay', 'away': 'Germany', 'home_point': 2, 'away_point': 3, 'dif': -1, 'home_rank': 16, 'away_rank': 6, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Spain', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 4, 'away_rank': 2, 'round': 2, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Sweden', 'home_point': 2, 'away_point': 0, 'dif': 2, 'home_rank': 19, 'away_rank': 16, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Argentina', 'away': 'Mexico', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 9, 'away_rank': 4, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'England', 'away': 'Ecuador', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 10, 'away_rank': 39, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Portugal', 'away': 'Netherlands', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 7, 'away_rank': 3, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Italy', 'away': 'Australia', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 13, 'away_rank': 43, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Switzerland', 'away': 'Ukraine', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 35, 'away_rank': 45, 'round': 16, 'home_shootout': 0, 'away_shootout': 3},
+{'home': 'Brazil', 'away': 'Ghana', 'home_point': 3, 'away_point': 0, 'dif': 3, 'home_rank': 1, 'away_rank': 48, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Spain', 'away': 'France', 'home_point': 1, 'away_point': 3, 'dif': -2, 'home_rank': 6, 'away_rank': 8, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Argentina', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 19, 'away_rank': 9, 'round': 8, 'home_shootout': 4, 'away_shootout': 2},
+{'home': 'Italy', 'away': 'Ukraine', 'home_point': 3, 'away_point': 0, 'dif': 3, 'home_rank': 13, 'away_rank': 45, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'England', 'away': 'Portugal', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 10, 'away_rank': 7, 'round': 8, 'home_shootout': 1, 'away_shootout': 3},
+{'home': 'Brazil', 'away': 'France', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 1, 'away_rank': 8, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Italy', 'home_point': 0, 'away_point': 2, 'dif': -2, 'home_rank': 19, 'away_rank': 13, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Portugal', 'away': 'France', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 7, 'away_rank': 8, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Portugal', 'home_point': 3, 'away_point': 1, 'dif': 2, 'home_rank': 19, 'away_rank': 7, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Italy', 'away': 'France', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 13, 'away_rank': 8, 'round': 2, 'home_shootout': 5, 'away_shootout': 3},
+{'home': 'Germany', 'away': 'Paraguay', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 11, 'away_rank': 18, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Denmark', 'away': 'England', 'home_point': 0, 'away_point': 3, 'dif': -3, 'home_rank': 20, 'away_rank': 12, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Sweden', 'away': 'Senegal', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 19, 'away_rank': 42, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Spain', 'away': 'Republic of Ireland', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 8, 'away_rank': 15, 'round': 16, 'home_shootout': 3, 'away_shootout': 2},
+{'home': 'Mexico', 'away': 'United States', 'home_point': 0, 'away_point': 2, 'dif': -2, 'home_rank': 7, 'away_rank': 13, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Belgium', 'home_point': 2, 'away_point': 0, 'dif': 2, 'home_rank': 2, 'away_rank': 23, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Japan', 'away': 'Turkey', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 32, 'away_rank': 22, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Korea Republic', 'away': 'Italy', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 40, 'away_rank': 6, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'England', 'away': 'Brazil', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 12, 'away_rank': 2, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'United States', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 11, 'away_rank': 13, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Spain', 'away': 'Korea Republic', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 8, 'away_rank': 40, 'round': 8, 'home_shootout': 3, 'away_shootout': 5},
+{'home': 'Senegal', 'away': 'Turkey', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 42, 'away_rank': 22, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Korea Republic', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 11, 'away_rank': 40, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Turkey', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 2, 'away_rank': 22, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Korea Republic', 'away': 'Turkey', 'home_point': 2, 'away_point': 3, 'dif': -1, 'home_rank': 40, 'away_rank': 22, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Brazil', 'home_point': 0, 'away_point': 2, 'dif': -2, 'home_rank': 11, 'away_rank': 2, 'round': 2, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Italy', 'away': 'Norway', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 14, 'away_rank': 7, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Chile', 'home_point': 4, 'away_point': 1, 'dif': 3, 'home_rank': 1, 'away_rank': 9, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'France', 'away': 'Paraguay', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 18, 'away_rank': 29, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Nigeria', 'away': 'Denmark', 'home_point': 1, 'away_point': 4, 'dif': -3, 'home_rank': 74, 'away_rank': 27, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Mexico', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 2, 'away_rank': 4, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Yugoslavia', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 25, 'away_rank': 8, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Romania', 'away': 'Croatia', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 22, 'away_rank': 19, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Argentina', 'away': 'England', 'home_point': 2, 'away_point': 2, 'dif': 0, 'home_rank': 6, 'away_rank': 5, 'round': 16, 'home_shootout': 4, 'away_shootout': 3},
+{'home': 'Italy', 'away': 'France', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 14, 'away_rank': 18, 'round': 8, 'home_shootout': 3, 'away_shootout': 4},
+{'home': 'Brazil', 'away': 'Denmark', 'home_point': 3, 'away_point': 2, 'dif': 1, 'home_rank': 1, 'away_rank': 27, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Argentina', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 25, 'away_rank': 6, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Croatia', 'home_point': 0, 'away_point': 3, 'dif': -3, 'home_rank': 2, 'away_rank': 19, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Netherlands', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 1, 'away_rank': 25, 'round': 4, 'home_shootout': 4, 'away_shootout': 2},
+{'home': 'France', 'away': 'Croatia', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 18, 'away_rank': 19, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Croatia', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 25, 'away_rank': 19, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'France', 'home_point': 0, 'away_point': 3, 'dif': -3, 'home_rank': 1, 'away_rank': 18, 'round': 2, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Germany', 'away': 'Belgium', 'home_point': 3, 'away_point': 2, 'dif': 1, 'home_rank': 1, 'away_rank': 27, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Spain', 'away': 'Switzerland', 'home_point': 3, 'away_point': 0, 'dif': 3, 'home_rank': 5, 'away_rank': 12, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Saudi Arabia', 'away': 'Sweden', 'home_point': 1, 'away_point': 3, 'dif': -2, 'home_rank': 34, 'away_rank': 10, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Romania', 'away': 'Argentina', 'home_point': 3, 'away_point': 2, 'dif': 1, 'home_rank': 7, 'away_rank': 8, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Republic of Ireland', 'home_point': 2, 'away_point': 0, 'dif': 2, 'home_rank': 2, 'away_rank': 14, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'United States', 'home_point': 1, 'away_point': 0, 'dif': 1, 'home_rank': 3, 'away_rank': 23, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Nigeria', 'away': 'Italy', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 11, 'away_rank': 4, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Mexico', 'away': 'Bulgaria', 'home_point': 1, 'away_point': 1, 'dif': 0, 'home_rank': 16, 'away_rank': 29, 'round': 16, 'home_shootout': 1, 'away_shootout': 3},
+{'home': 'Italy', 'away': 'Spain', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 4, 'away_rank': 5, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Netherlands', 'away': 'Brazil', 'home_point': 2, 'away_point': 3, 'dif': -1, 'home_rank': 2, 'away_rank': 3, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Bulgaria', 'away': 'Germany', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 29, 'away_rank': 1, 'round': 8, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Romania', 'away': 'Sweden', 'home_point': 2, 'away_point': 2, 'dif': 0, 'home_rank': 7, 'away_rank': 10, 'round': 8, 'home_shootout': 4, 'away_shootout': 5},
+{'home': 'Bulgaria', 'away': 'Italy', 'home_point': 1, 'away_point': 2, 'dif': -1, 'home_rank': 29, 'away_rank': 4, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Sweden', 'away': 'Brazil', 'home_point': 0, 'away_point': 1, 'dif': -1, 'home_rank': 10, 'away_rank': 3, 'round': 4, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Sweden', 'away': 'Bulgaria', 'home_point': 4, 'away_point': 0, 'dif': 4, 'home_rank': 10, 'away_rank': 29, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
+{'home': 'Brazil', 'away': 'Italy', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 3, 'away_rank': 4, 'round': 2, 'home_shootout': 3, 'away_shootout': 2}]
+
 
 def raw_to_json(text):
   split_text = text.split(',')
@@ -188,3 +285,32 @@ def blank_checker(string):
     return True
   else:
     return False
+  
+
+def highest_round(country):
+  global game_log
+  round_cnt = []
+  for i in game_log:
+    if i['home'] == country or i['away'] == country:
+      if i['round'] == 2:
+        if i['home'] == country:
+          if i['home_point'] > i['away_point'] or i['home_shootout'] > i['away_shootout']:
+            round_cnt.append(1)
+          else:
+            round_cnt.append(2)
+        elif i['home'] == country:
+          if i['away_point'] > i['home_point'] or i['away_shootout'] > i['home_shootout']:
+            round_cnt.append(1)
+          else:
+            round_cnt.append(2)
+
+      else:
+        round_cnt.append(i['round'])
+
+  if min(round_cnt) == 1:
+    return "우승"
+  elif min(round_cnt) == 2:
+    return "준우승"
+  else:
+    return f'{min(round_cnt)}강'
+
