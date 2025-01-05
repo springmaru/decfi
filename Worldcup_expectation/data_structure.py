@@ -97,30 +97,30 @@ game_log = [{'home': 'Brazil', 'away': 'Chile', 'home_point': 1, 'away_point': 1
 {'home': 'Brazil', 'away': 'Italy', 'home_point': 0, 'away_point': 0, 'dif': 0, 'home_rank': 3, 'away_rank': 4, 'round': 2, 'home_shootout': 3, 'away_shootout': 2}]
 
 
-#피파 랭킹 - {연도: 순위} 형태로 정리됨
+#FIFA Ranking - {Year: Ranking} format
 fifa_ranking = {2014: ['Spain', 'Germany', 'Brazil', 'Portugal', 'Argentina', 'Switzerland', 'Uruguay', 'Colombia', 'Italy', 'England', 'Belgium', 'Greece', 'United States', 'Chile', 'Netherlands', 'Ukraine', 'France', 'Croatia', 'Russia', 'Mexico', 'Bosnia and Herzegovina', 'Algeria', 'Denmark', "Côte d'Ivoire", 'Slovenia', 'Ecuador', 'Scotland', 'Costa Rica', 'Romania', 'Serbia', 'Panama', 'Sweden', 'Honduras', 'Czech Republic', 'Turkey', 'Egypt', 'Ghana', 'Armenia', 'Cape Verde Islands', 'Venezuela', 'Wales', 'Austria', 'IR Iran', 'Nigeria', 'Peru', 'Japan', 'Hungary', 'Tunisia', 'Slovakia', 'Paraguay'], 2010: ['Brazil', 'Spain', 'Portugal', 'Netherlands', 'Italy', 'Germany', 'Argentina', 'England', 'France', 'Croatia', 'Russia', 'Egypt', 'Greece', 'United States', 'Serbia', 'Uruguay', 'Mexico', 'Chile', 'Cameroon', 'Australia', 'Nigeria', 'Norway', 'Ukraine', 'Switzerland', 'Slovenia', 'Israel', "Côte d'Ivoire", 'Romania', 'Turkey', 'Algeria', 'Paraguay', 'Ghana', 'Czech Republic', 'Slovakia', 'Colombia', 'Denmark', 'Sweden', 'Honduras', 'Bulgaria', 'Costa Rica', 'Republic of Ireland', 'Gabon', 'Scotland', 'Ecuador', 'Japan', 'Latvia', 'Korea Republic', 'Burkina Faso', 'Venezuela', 'Lithuania'], 2006: ['Brazil', 'Czech Republic', 'Netherlands', 'Mexico', 'United States', 'Spain', 'Portugal', 'France', 'Argentina', 'England', 'Nigeria', 'Denmark', 'Italy', 'Turkey', 'Cameroon', 'Sweden', 'Egypt', 'Japan', 'Germany', 'Greece', 'Tunisia', 'Uruguay', 'IR Iran', 'Croatia', 'Romania', 'Costa Rica', 'Colombia', 'Senegal', 'Poland', 'Korea Republic', 'Republic of Ireland', "Côte d'Ivoire", 'Paraguay', 'Saudi Arabia', 'Switzerland', 'Morocco', 'Russia', 'Bulgaria', 'Ecuador', 'Norway', 'Slovakia', 'Honduras', 'Australia', 'Serbia and Montenegro', 'Ukraine', 'Jamaica', 'Trinidad and Tobago', 'Ghana', 'Finland', 'Israel'], 2002: ['France', 'Brazil', 'Argentina', 'Colombia', 'Portugal', 'Italy', 'Mexico', 'Spain', 'Netherlands', 'Yugoslavia', 'Germany', 'England', 'United States', 'Romania', 'Republic of Ireland', 'Czech Republic', 'Cameroon', 'Paraguay', 'Sweden', 'Denmark', 'Croatia', 'Turkey', 'Belgium', 'Uruguay', 'Slovenia', 'Honduras', 'Nigeria', 'Russia', 'Costa Rica', 'IR Iran', 'Tunisia', 'Japan', 'Norway', 'Saudi Arabia', 'Trinidad and Tobago', 'Ecuador', 'South Africa', 'Poland', 'Morocco', 'Korea Republic', 'Finland', 'Senegal', 'Egypt', 'Ukraine', 'Chile', "Côte d'Ivoire", 'Peru', 'Australia', 'Slovakia', 'China PR'], 1998: ['Brazil', 'Germany', 'Czech Republic', 'Mexico', 'England', 'Argentina', 'Norway', 'Yugoslavia', 'Chile', 'Colombia', 'United States', 'Japan', 'Morocco', 'Italy', 'Spain', 'Russia', 'Egypt', 'France', 'Croatia', 'Korea Republic', 'Tunisia', 'Romania', 'Zambia', 'South Africa', 'Netherlands', 'Ecuador', 'Denmark', 'Sweden', 'Paraguay', 'Jamaica', 'Austria', 'Australia', 'Bolivia', 'Saudi Arabia', 'Bulgaria', 'Belgium', 'Peru', 'Uruguay', 'Portugal', 'Slovakia', 'Scotland', 'IR Iran', 'Kuwait', "Côte d'Ivoire", 'Lithuania', 'Republic of Ireland', 'Israel', 'Trinidad and Tobago', 'Cameroon', 'Thailand', 'China PR', 'Georgia', 'Turkey', 'Poland', 'Greece', 'Angola', 'Algeria', 'Costa Rica', 'United Arab Emirates', 'Guinea', 'Finland', 'Hungary', 'Zaire', 'Ukraine', 'Ghana', 'Mali', 'Burkina Faso', 'El Salvador', 'Mozambique', 'Quatar', 'FYR Macedonia', 'Iceland', 'Togo', 'Nigeria', 'Guatemala'], 1994: ['Germany', 'Netherlands', 'Brazil', 'Italy', 'Spain', 'Norway', 'Romania', 'Argentina', 'Denmark', 'Sweden', 'Nigeria', 'Switzerland', 'France', 'Republic of Ireland', 'England', 'Mexico', 'Colombia', 'Uruguay', 'Russia', 'Zambia', "Côte d'Ivoire", 'Portugal', 'United States', 'Cameroon', 'Egypt', 'Ghana', 'Belgium', 'Morocco', 'Bulgaria', 'Tunisia', 'Greece', 'Poland', 'Scotland', 'Saudi Arabia', 'Wales', 'Austria', 'Korea Republic', 'Iceland', 'Ecuador', 'Chile', 'Northern Ireland', 'Zimbabwe', 'Bolivia', 'Slovakia', 'Czech Republic', 'Finland', 'Australia', 'Algeria', 'Mali', 'Honduras']}
 
 
 def raw_to_json(text):
   split_text = text.split(',')
-  #1998~2014 월드컵과 1994 월드컵의 문자열 길이가 달라서 1998~2014 월드컵의 split_text에서 빈 문자열을 제거
+  #remove empty strings from split_text of the 1998-2014 worldcuups because the string lengths differ from the 1994 World Cup.
   if len(split_text) == 13:
     split_text.remove(split_text[1])
 
-  #승부차기를 했을 때
+  #when penalty shootout occurs
   if len(split_text[5]) != 3:
     home_away_score = int(split_text[5][4])
     home_shootout = int(split_text[5][1])
     away_shootout = int(split_text[5][9])
     json_text = {"home": split_text[4][:-3], "away": split_text[6][3:], "home_point": home_away_score, "away_point": home_away_score, "dif": 0, "home_rank": fifa_ranking[int(split_text[2][:4])].index(split_text[4][:-3]) + 1, "away_rank": fifa_ranking[int(split_text[2][:4])].index(split_text[6][3:]) + 1, "round": 16, "home_shootout": home_shootout, "away_shootout": away_shootout}
 
-  #승부차기를 하지 않았을 때
+  #when penalty shootout X
   else:
     home_point = int(split_text[5].split('–')[0])
     away_point = int(split_text[5].split('–')[1])
     json_text = {"home": split_text[4][:-3], "away": split_text[6][3:], "home_point": home_point, "away_point": away_point, "dif": home_point - away_point, "home_rank": fifa_ranking[int(split_text[2][:4])].index(split_text[4][:-3]) + 1, "away_rank": fifa_ranking[int(split_text[2][:4])].index(split_text[6][3:]) + 1, "round": 16, "home_shootout": 0, "away_shootout": 0}
 
-  #몇 강 경기인지
+  #WHich round
   if split_text[0] == 'Round of 16':
     json_text['round'] = 16
   elif split_text[0] == 'Quarter-finals':
@@ -146,18 +146,18 @@ def get_teams_of_league(worldcup):
   dictionary_list = []
   return_dict = [{16: []}, {8:[]}, {4:[]}, {2:[]}, {1:[]}]
 
-#엔터(\n)를 기준으로 쪼개진 값을 딕셔너리 형태로 변환 - split_list로 들어감
+#Convert values split based on newline (\n) into dictionary form - goes into split_list
   split_list = [raw_to_json(i) for i in worldcup_str]
 
-#참가한 나라들 모두 나열(중복 X) - country_list로 들어감
+#List all participating countries (no duplicates) - goes into country_list.
   country_list = set([j['home'] for j in split_list] + [j['away'] for j in split_list])
   
   for k in country_list:
-    #한 나라가 참가한 모든 경기를 team_gamecollection에 넣음
+    #Put all the matches a country has participated in into team_gamecollection.
     team_gamecollection = []
     for l in split_list:
       if k == l['home'] or k == l['away']:
-        #결승 진출 팀 분리: 우승 팀에는 team_gamecollection에 '우승'을 넣음
+        #Separate finalist teams: Add 'Champion' to team_gamecollection for the winning team.
         if l['round'] == 2:
           if k == l['home']:
             if l['home_point'] > l['away_point'] or l['home_shootout'] > l['away_shootout']:
