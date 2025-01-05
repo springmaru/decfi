@@ -1,8 +1,8 @@
 import numpy as np
 import tensorflow as tf
-tf.random.set_seed(777) #하이퍼파라미터 튜닝을 위해 실행시 마다 변수가 같은 초기값 가지게 하기
+tf.random.set_seed(777) #Ensure variables have the same initial values in each run for hyperparameter tuning.
 #import main
-##########데이터 로드
+##########Load Data
 import random as rd
 
 print([[rd.randint(-10,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10)] for i in range(1,3)])
@@ -10,18 +10,18 @@ print([ [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]][rd.randran
 x_data = np.array([[rd.randint(-10,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10),rd.randint(1,10)] for i in range(1,100)])
 
 y_data = np.array([ [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]][rd.randrange(0,5)] for i in range(1,100)])
-labels = ['16강', '8강', '4강', "준우승", "우승"]
+labels = ['Round 16', 'Quarterfinals', 'Semifinals', "Runner-up", "Champion"]
 
 # analysis_to_train(match)
 
-# 판 만들기 > 1. 2. 다중분류 (소프트맥스 회귀)
-##########모델 생성
+# Creating a board > 1. 2. Multiclass classification (softmax regression)
+##########Model creation
 
 input = tf.keras.layers.Input(shape=(6,))
 net = tf.keras.layers.Dense(units=5, activation='softmax')(input)
 model = tf.keras.models.Model(input, net)
 
-##########모델 학습 및 검증
+##########Model training and validation
 
 def categorical_crossentropy(Y, predictions):
     cross_entropy = tf.math.reduce_sum(Y * (-tf.math.log(predictions)), axis=1) 
@@ -41,7 +41,7 @@ for epoch_index in range(epochs):
     print('epoch: {}/{}: loss: {:.4f}'.format(epoch_index + 1, epochs, loss_value.numpy()))
 
 '''
-#내장 루프
+#Internal Loop
 def categorical_crossentropy(Y, predictions):
     cross_entropy = tf.reduce_sum(Y * (-tf.math.log(predictions)), axis=1) 
     loss = tf.reduce_mean(cross_entropy)
@@ -54,7 +54,7 @@ model.compile(loss=categorical_crossentropy, optimizer='adam')
 model.fit(x_train, y_train, epochs=50) 
 '''
 
-##########모델 예측
+##########Model Prediction
 
 x_test = np.array([
     [4, 6, 7, 8, 9, 1]
