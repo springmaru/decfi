@@ -22,7 +22,7 @@ root.geometry('1000x600')
 
 
 
-#로고
+#LOGO
 my_img1 = Image.open('/Users/b/Desktop/logo.png')
 resize_image1 = my_img1.resize((200, 150))
 img1 = ImageTk.PhotoImage(resize_image1)
@@ -37,7 +37,7 @@ label_qstn.pack()
 
 
 
-#표에 들어갈 2022 테스트용 데이터
+#2022 Test Data for table
 matches_2022 = [
     {'home': 'Netherlands', 'away': 'United States', 'home_point': 3, 'away_point': 1, 'dif': 2, 'home_rank': 8, 'away_rank': 16, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
     {'home': 'Argentina', 'away': 'Australia', 'home_point': 2, 'away_point': 1, 'dif': 1, 'home_rank': 3, 'away_rank': 38, 'round': 16, 'home_shootout': 0, 'away_shootout': 0},
